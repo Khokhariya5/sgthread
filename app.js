@@ -4,7 +4,7 @@ const user = require('./routes/user.route');
 const group = require('./routes/group.route');
 const category = require('./routes/category.route');
 const product = require('./routes/product.route');
-
+const PORT = process.env.PORT || 5000
 //----------------------- START MongoDB Confiuration ------------------------------------------
 const mongoose = require('mongoose');
 
@@ -37,7 +37,7 @@ app.use('/group',group);
 app.use('/cat',category);
 app.use('/product',product);
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("Server Started ...........");
 })
 //----------------------- END EXPRESS JS CODE ---------------------------------------------
